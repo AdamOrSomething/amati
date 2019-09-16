@@ -22,7 +22,7 @@ class Game {
     $('select').empty();
 
     var current_storyline = this.storyline;
-    for (i = 0; i < this.iteration.length; i++) {
+    for (var i = 0; i < this.iteration.length; i++) {
       current_storyline = current_storyline[this.iteration[i]];
     }
     var split = current_storyline.split('CHOICES');
