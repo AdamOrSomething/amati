@@ -39,11 +39,9 @@ class Game {
   }
 }
 
-$(document).ready(function() {
-  window.onerror = function(message) {
-    alert(message);
-  }
+window.onerror = function(message) {
+  alert(message);
+}
 
-  var game = new Game();
-  game.init();
-});
+var game = new Game();
+game.init();
