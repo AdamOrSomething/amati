@@ -37,6 +37,8 @@ class Game {
     $('#output').text(text);
     $.each(options, function(index, value) {
       choice = document.createElement('option');
+      $(choice).text(value);
+      $('select').append(choice);
     });
   }
 }
