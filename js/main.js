@@ -8,7 +8,7 @@ class Game {
     jquery.src = 'js/jquery.js';
     document.body.appendChild(jquery);
     
-    this.iteration = [];
+    this.iteration = [0];
     this.story();
   }
   
