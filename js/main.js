@@ -31,7 +31,7 @@ class Game {
     var options = split[1].split(':');
 
     var choice;
-    $('#output').text(text.replace(/\n/g, '<br>'));
+    $('#output').html(text.replace(/\n/g, '<br>'));
     $.each(options, function(index, value) {
       choice = document.createElement('option');
       $(choice).text(value);
