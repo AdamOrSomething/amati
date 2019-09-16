@@ -44,4 +44,4 @@ window.onerror = function(message) {
 }
 
 var game = new Game();
-game.init();
+game.play();
