@@ -25,12 +25,13 @@ class Game {
     for (var i = 0; i < this.iteration.length; i++) {
       current_storyline = current_storyline[this.iteration[i]];
     }
+    
     var split = current_storyline.split('CHOICES');
     var text = split[0];
     var options = split[1].split(':');
 
     var choice;
-    $('#output').text(text);
+    $('#output').text(text.replace(/\n/g, '<br>'));
     $.each(options, function(index, value) {
       choice = document.createElement('option');
       $(choice).text(value);
