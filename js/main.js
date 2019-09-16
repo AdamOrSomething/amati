@@ -43,5 +43,9 @@ class Game {
   }
 }
 
+window.onerror = function(message) {
+  alert(message);
+}
+
 var game = new Game();
 game.init();
