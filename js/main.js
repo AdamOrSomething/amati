@@ -26,7 +26,7 @@ class Game {
     for (var i = 0; i < this.iteration.length; i++) {
       current_storyline = current_storyline[this.iteration[i]];
     }
-    
+
     var split = current_storyline.split('CHOICES');
     var text = split[0];
     var options = split[1].split(':');
@@ -41,8 +41,8 @@ class Game {
   }
 }
 
-window.onerror = function(message) {
-  alert(message);
+window.onerror = function(message, othervar, othervar2, othervar3, error) {
+  alert(error.stack);
 }
 
 var game = new Game();
