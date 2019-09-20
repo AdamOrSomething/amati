@@ -1,6 +1,7 @@
 class Game {
   constructor() {
     this.init();
+    this.play();
   }
 
   init() {
@@ -45,4 +46,3 @@ window.onerror = function(message) {
 }
 
 var game = new Game();
-game.play();
