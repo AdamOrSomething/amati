@@ -48,6 +48,6 @@ window.onerror = function(message, othervar, othervar2, othervar3, error) {
 var game = new Game();
 
 $('#start').click(function() {
-  this.hide();
+  $(this).hide();
   $('#game').show();
 });
