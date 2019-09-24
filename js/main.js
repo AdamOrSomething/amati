@@ -46,3 +46,8 @@ window.onerror = function(message, othervar, othervar2, othervar3, error) {
 }
 
 var game = new Game();
+
+$('#start').click(e => {
+  this.hide();
+  $('#game').show();
+});
