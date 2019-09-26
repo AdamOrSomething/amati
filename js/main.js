@@ -5,7 +5,7 @@ class Game {
   }
 
   init() {
-    this.iteration = [0];
+    this.iteration = [];
     this.story();
   }
 
@@ -32,7 +32,7 @@ class Game {
       current_storyline = current_storyline[this.iteration[i]];
     }
 
-    var split = current_storyline.split('CHOICES');
+    var split = current_storyline[0].split('CHOICES');
     var text = split[0];
     var options = split[1].split(':');
 
