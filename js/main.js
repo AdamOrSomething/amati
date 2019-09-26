@@ -13,9 +13,14 @@ class Game {
     this.storyline = [
       'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.' +
       'CHOICESLeft:Right',
-      {
-
-      }
+      [
+        [
+          'Test'
+        ],
+        [
+          
+        ]
+      ]
     ];
   }
 
@@ -36,8 +41,16 @@ class Game {
     $.each(options, function(index, value) {
       choice = document.createElement('option');
       $(choice).text(value);
+      $(choice).val(index);
       $('select').append(choice);
     });
+    
+    this.iteration.push(1);
+  }
+  
+  continue() {
+    this.iteration.push($('select').val());
+    this.play();
   }
 }
 
@@ -50,4 +63,8 @@ var game = new Game();
 $('#start').click(function() {
   $(this).hide();
   $('#game').show();
+});
+
+$('#submit').click(function() {
+  game.continue();
 });
