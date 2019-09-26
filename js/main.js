@@ -15,7 +15,7 @@ class Game {
       'CHOICESLeft:Right',
       [
         [
-          'Test'
+          'TestCHOICES1'
         ],
         [
           
