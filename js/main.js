@@ -40,6 +40,7 @@ class Game {
     } catch (e) {
       $('#game').hide();
       $('#game_over').show();
+      return;
     }
 
     var choice;
