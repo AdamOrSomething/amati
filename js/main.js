@@ -34,19 +34,21 @@ And a moment later, the hilt in buried in your chest.
   play() {
     $('select').empty();
 
-      var current_storyline = this.storyline;
-      for (var i = 0; i < this.iteration.length; i++) {
-        current_storyline = current_storyline[this.iteration[i]];
-      }
+    var current_storyline = this.storyline;
+    for (var i = 0; i < this.iteration.length; i++) {
+      current_storyline = current_storyline[this.iteration[i]];
+    }
 
     try {
       var split = current_storyline[0].split('CHOICES');
+      var text = split[0];
+
+      var options = split[1].split(':');
     } catch (e) {
       var text = current_storyline[0] + '<br><b>THE END</b>';
       $('#output').html(current_storyline[0].replace(/\n/g, '<br>'));
+      return;
     }
-      var text = split[0];
-      var options = split[1].split(':');
 
     var choice;
     $('#output').html(text.replace(/\n/g, '<br>'));
