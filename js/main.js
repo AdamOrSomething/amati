@@ -27,9 +27,14 @@ class Game {
   play() {
     $('select').empty();
 
+    try {
     var current_storyline = this.storyline;
     for (var i = 0; i < this.iteration.length; i++) {
       current_storyline = current_storyline[this.iteration[i]];
+    }
+    } catch (e) {
+      $('#game').hide();
+      $('#game_over').show();
     }
 
     var split = current_storyline[0].split('CHOICES');
