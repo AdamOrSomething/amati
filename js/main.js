@@ -15,10 +15,17 @@ class Game {
       'CHOICESLeft:Right',
       [
         [
-          'TestCHOICES1'
+          ''
         ],
         [
-
+          `
+You come across a man on his knees in the center of a clearing.  He’s facing away from you, his long black hair falling down to his shoulders.  His jeans are frayed at the cuffs and full of grass stains, his hands at his waist, his fingers curled slightly. You step on a branch.  The sound startles to the man.  He spins around and stands up, suddenly brandishing a knife at you.  Its crooked, silver blade points directly at your heart.  His hair falls out of his face.
+High, arching eyebrows.
+Thin lips the color of dried blood.
+Eyes, black eyes that convey no soul, fathomless as black pits cut into the flesh.
+He starts to close the distance between you at a frightening speed.
+And a moment later, the hilt in buried in your chest.
+           `
         ]
       ]
     ];
@@ -27,21 +34,19 @@ class Game {
   play() {
     $('select').empty();
 
-    try {
       var current_storyline = this.storyline;
       for (var i = 0; i < this.iteration.length; i++) {
         current_storyline = current_storyline[this.iteration[i]];
       }
 
+    try {
       var split = current_storyline[0].split('CHOICES');
+    } catch (e) {
+      var text = current_storyline[0] + '<br><b>THE END</b>';
+      $('#output').html(current_storyline[0].replace(/\n/g, '<br>'));
+    }
       var text = split[0];
       var options = split[1].split(':');
-
-    } catch (e) {
-      $('#game').hide();
-      $('#game_over').show();
-      return;
-    }
 
     var choice;
     $('#output').html(text.replace(/\n/g, '<br>'));
