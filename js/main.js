@@ -18,7 +18,7 @@ class Game {
           'TestCHOICES1'
         ],
         [
-          
+
         ]
       ]
     ];
@@ -28,18 +28,19 @@ class Game {
     $('select').empty();
 
     try {
-    var current_storyline = this.storyline;
-    for (var i = 0; i < this.iteration.length; i++) {
-      current_storyline = current_storyline[this.iteration[i]];
-    }
+      var current_storyline = this.storyline;
+      for (var i = 0; i < this.iteration.length; i++) {
+        current_storyline = current_storyline[this.iteration[i]];
+      }
+
+      var split = current_storyline[0].split('CHOICES');
+      var text = split[0];
+      var options = split[1].split(':');
+
     } catch (e) {
       $('#game').hide();
       $('#game_over').show();
     }
-
-    var split = current_storyline[0].split('CHOICES');
-    var text = split[0];
-    var options = split[1].split(':');
 
     var choice;
     $('#output').html(text.replace(/\n/g, '<br>'));
@@ -49,11 +50,11 @@ class Game {
       $(choice).val(index);
       $('select').append(choice);
     });
-    
+
     this.iteration.push(1);
   }
-  
-  continue() {
+
+  continue () {
     this.iteration.push($('select').val());
     this.play();
   }
