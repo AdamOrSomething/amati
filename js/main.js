@@ -1,4 +1,16 @@
 class Game {
+  static display(text) {
+    var text_array = text.split('\n');
+    
+    $('#output').html('');
+    
+    for(var i = 0; i < text_array.length; i++) {
+      setTimeout(() => {
+        $('#output').append(text_array[i]);
+      }, i * 1000);
+    }
+  }
+  
   constructor() {
     this.init();
     this.play();
@@ -45,14 +57,14 @@ And a moment later, the hilt in buried in your chest.
 
       var options = split[1].split(':');
     } catch (e) {
-      var text = current_storyline[0] + '<br><b>THE END</b>';
-      $('#output').html(text.replace(/\n/g, '<br>'));
+      var text = current_storyline[0] + '\n<b>THE END</b>';
+      Game.display(text);
       $('#input').hide();
       return;
     }
 
     var choice;
-    $('#output').html(text.replace(/\n/g, '<br>'));
+    Game.display(text);
     $.each(options, function(index, value) {
       choice = document.createElement('option');
       $(choice).text(value);
