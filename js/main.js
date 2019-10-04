@@ -45,9 +45,9 @@ And a moment later, the hilt in buried in your chest.
 
       var options = split[1].split(':');
     } catch (e) {
-      alert('catch');
       var text = current_storyline[0] + '<br><b>THE END</b>';
-      $('#output').html(current_storyline[0].replace(/\n/g, '<br>'));
+      $('#output').html(text.replace(/\n/g, '<br>'));
+      $('#input').hide();
       return;
     }
 
