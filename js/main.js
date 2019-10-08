@@ -1,18 +1,24 @@
 class Game {
   static display(text) {
+    $('#input').hide();
+
     var text_array = text.split('\n');
     var i = 0;
-    
+
     $('#output').html('');
-    
+
     var interval = setInterval(() => {
-      $('#output').append(text_array[i]);
-      if(++i >= text_array.length) {
+      if (i >= text_array.length) {
         clearTimeout(interval);
+
+        $('#input').show();
+      } else {
+        $('#output').append(text_array[i] + '<br>');
+        i++;
       }
-    }, 1000);
+    }, 3000);
   }
-  
+
   constructor() {
     this.init();
     this.play();
@@ -21,6 +27,17 @@ class Game {
   init() {
     this.iteration = [];
     this.story();
+
+
+    $('#start').click(function() {
+      $(this).hide();
+      $('#game').show();
+    });
+
+    $('#submit').click(function() {
+      game.continue();
+    });
+
   }
 
   story() {
@@ -88,12 +105,3 @@ window.onerror = function(message, othervar, othervar2, othervar3, error) {
 }
 
 var game = new Game();
-
-$('#start').click(function() {
-  $(this).hide();
-  $('#game').show();
-});
-
-$('#submit').click(function() {
-  game.continue();
-});
