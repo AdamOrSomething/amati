@@ -1,24 +1,29 @@
 class Game {
-  static display(text) {
+  static display(text, showAnswer = true) {
     $('#input').hide();
 
     var text_array = text.split('\n');
-    var i = -1;
+    var i = 0;
 
     $('#output').html('');
 
-    var interval = setInterval(() => {
-      if (i >= text_array.length) {
-        clearTimeout(interval);
-
-        $('#input').show();
-      } else {
-        if(i >= 0) {
-          $('#output').append(text_array[i] + '<br>');
-        }
-        i++;
+    setTimeout(() => {
+      Game.displayTimeout(text_array, i);
+    }, 1000);
+  }
+  
+  static displayTimeout(text_array, i) {
+    $('#output').append(text_array[i] + '<br>');
+      
+      if(!(++i >= text_array.length)) {
+        setTimeout(() => {
+          Game.displayTimeout(text_array, i);
+        }, (text_array[i-0].length - (text_array[i-0].split(' ') + 1) * 50));
+      } else if(showAnswer) {
+        setTimeout(() => {
+          $('#input').show();
+        }, (text_array[i-0].length - (text_array[i-0].split(' ') + 1) * 50));
       }
-    }, 2000);
   }
 
   constructor() {
@@ -79,8 +84,7 @@ And a moment later, the hilt in buried in your chest.
       var options = split[1].split(':');
     } catch (e) {
       var text = current_storyline[0] + '\n<b>THE END</b>';
-      Game.display(text);
-      $('#input').hide();
+      Game.display(text, false);
       return;
     }
 
@@ -96,10 +100,11 @@ And a moment later, the hilt in buried in your chest.
     this.iteration.push(1);
   }
 
-  continue () {
+  continue() {
     this.iteration.push($('select').val());
     this.play();
   }
+  
 }
 
 window.onerror = function(message, othervar, othervar2, othervar3, error) {
