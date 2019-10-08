@@ -8,11 +8,11 @@ class Game {
     $('#output').html('');
 
     setTimeout(() => {
-      Game.displayTimeout(text_array, i);
+      Game.displayTimeout(text_array, i, showAnswer);
     }, 1000);
   }
   
-  static displayTimeout(text_array, i) {
+  static displayTimeout(text_array, i, showAnswer) {
     $('#output').append(text_array[i] + '<br>');
       
       if(!(++i >= text_array.length)) {
