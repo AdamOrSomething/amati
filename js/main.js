@@ -1,14 +1,16 @@
 class Game {
   static display(text) {
     var text_array = text.split('\n');
+    var i = 0;
     
     $('#output').html('');
     
-    for(var i = 0; i < text_array.length; i++) {
-      setTimeout(() => {
-        $('#output').append(text_array[i]);
-      }, i * 1000);
-    }
+    var interval = setInterval(() => {
+      $('#output').append(text_array[i]);
+      if(++i >= text_array.length) {
+        clearTimeout(interval);
+      }
+    }, 1000);
   }
   
   constructor() {
