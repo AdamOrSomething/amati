@@ -3,7 +3,7 @@ class Game {
     $('#input').hide();
 
     var text_array = text.split('\n');
-    var i = 0;
+    var i = -1;
 
     $('#output').html('');
 
@@ -13,10 +13,12 @@ class Game {
 
         $('#input').show();
       } else {
-        $('#output').append(text_array[i] + '<br>');
+        if(i >= 0) {
+          $('#output').append(text_array[i] + '<br>');
+        }
         i++;
       }
-    }, 3000);
+    }, 2000);
   }
 
   constructor() {
