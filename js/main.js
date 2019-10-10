@@ -14,15 +14,16 @@ class Game {
   
   static displayTimeout(text_array, i, showAnswer) {
     $('#output').append(text_array[i] + '<br>');
+    i++;
       
-      if(!(++i >= text_array.length)) {
+      if(!(i >= text_array.length)) {
         setTimeout(() => {
           Game.displayTimeout(text_array, i, showAnswer);
-        }, ((text_array[i-1].length - (text_array[i-1].split(' ') + 1)) * 500));
+        }, ((text_array[--i].length - (text_array[--i].split(' ').length - 1)) * 50));
       } else if(showAnswer) {
         setTimeout(() => {
           $('#input').show();
-        }, (text_array[i-1].length - (text_array[i-1].split(' ') + 1) * 500));
+        }, (text_array[--i].length - (text_array[--i].split(' ').length - 1) * 50));
       }
   }
 
