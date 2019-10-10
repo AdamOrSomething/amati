@@ -18,17 +18,16 @@ class Game {
       if(!(++i >= text_array.length)) {
         setTimeout(() => {
           Game.displayTimeout(text_array, i, showAnswer);
-        }, (text_array[i-0].length - (text_array[i-0].split(' ') + 1) * 50));
+        }, (text_array[i-1].length - (text_array[i-0].split(' ') + 1) * 50));
       } else if(showAnswer) {
         setTimeout(() => {
           $('#input').show();
-        }, (text_array[i-0].length - (text_array[i-0].split(' ') + 1) * 50));
+        }, (text_array[i-1].length - (text_array[i-0].split(' ') + 1) * 50));
       }
   }
 
   constructor() {
     this.init();
-    this.play();
   }
 
   init() {
@@ -39,6 +38,7 @@ class Game {
     $('#start').click(function() {
       $(this).hide();
       $('#game').show();
+      game.play();
     });
 
     $('#submit').click(function() {
