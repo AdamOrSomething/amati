@@ -18,11 +18,11 @@ class Game {
       if(!(++i >= text_array.length)) {
         setTimeout(() => {
           Game.displayTimeout(text_array, i, showAnswer);
-        }, (text_array[i-1].length - (text_array[i-0].split(' ') + 1) * 50));
+        }, (text_array[i-1].length - (text_array[i-1].split(' ') + 1) * 50));
       } else if(showAnswer) {
         setTimeout(() => {
           $('#input').show();
-        }, (text_array[i-1].length - (text_array[i-0].split(' ') + 1) * 50));
+        }, (text_array[i-1].length - (text_array[i-1].split(' ') + 1) * 50));
       }
   }
 
