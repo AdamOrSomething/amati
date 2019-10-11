@@ -59,7 +59,7 @@ class Game {
 
     story() {
         this.storyline = [
-            'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.CHOICESLeft:Right,
+            'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.CHOICESLeft:Right',
             [
                 [
                     `
