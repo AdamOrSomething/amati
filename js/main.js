@@ -20,6 +20,7 @@ class Game {
         setTimeout(() => {
           Game.displayTimeout(text_array, i, showAnswer);
         }, ((text_array[i-1].length - (text_array[i-1].split(' ').length - 1)) * 50));
+        return;
       } else if(showAnswer) {
         setTimeout(() => {
           $('#input').show();
