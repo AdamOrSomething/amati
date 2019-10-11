@@ -22,7 +22,7 @@ class Game {
                 Game.displayTimeout(text_array, i,
                     showAnswer);
             }, ((text_array[i - 1].length - (text_array[
-                i - 1].split(' ').length - 1)) * 20));
+                i - 1].split(' ').length - 1)) * 30));
             return;
         }
         else if (showAnswer) {
@@ -121,7 +121,9 @@ Ponytail narrows his eyes, and Blond gives you a perplexed look.
                                 ]
                             ]
                         ],
-                        []
+                        [
+                            // TODO
+                        ]
                     ]
                 ],
                 [
