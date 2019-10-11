@@ -1,69 +1,74 @@
 class Game {
-  static display(text, showAnswer = true) {
-    $('#input').hide();
+    static display(text, showAnswer = true) {
+        $('#input').hide();
 
-    var text_array = text.split('\n');
-    var i = 0;
+        var text_array = text.split('\n');
+        var i = 0;
 
-    $('#output').html('');
+        $('#output').html('');
 
-    setTimeout(() => {
-      Game.displayTimeout(text_array, i, showAnswer);
-    }, 1000);
-  }
-  
-  static displayTimeout(text_array, i, showAnswer) {
-    $('#output').append(text_array[i] + '<br>');
-    i++;
-      
-      if(!(i >= text_array.length)) {
         setTimeout(() => {
-          Game.displayTimeout(text_array, i, showAnswer);
-        }, ((text_array[i-1].length - (text_array[i-1].split(' ').length - 1)) * 50));
-        return;
-      } else if(showAnswer) {
-        setTimeout(() => {
-          $('#input').show();
-        }, (text_array[i-1].length - (text_array[i-1].split(' ').length - 1) * 50));
-      }
-  }
+            Game.displayTimeout(text_array, i,
+            showAnswer);
+        }, 500);
+    }
 
-  constructor() {
-    this.init();
-  }
+    static displayTimeout(text_array, i, showAnswer) {
+        $('#output').append(text_array[i].trim() + '<br><br>');
+        i++;
 
-  init() {
-    this.iteration = [];
-    this.story();
+        if (!(i >= text_array.length)) {
+            setTimeout(() => {
+                Game.displayTimeout(text_array, i,
+                    showAnswer);
+            }, ((text_array[i - 1].length - (text_array[
+                i - 1].split(' ').length - 1)) * 20));
+            return;
+        }
+        else if (showAnswer) {
+            setTimeout(() => {
+                $('#input').show();
+            }, (text_array[i - 1].length - (text_array[i -
+                1].split(' ').length - 1) * 50));
+        }
+    }
+
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.iteration = [];
+        this.story();
 
 
-    $('#start').click(function() {
-      $(this).hide();
-      $('#game').show();
-      game.play();
-    });
+        $('#start').click(function() {
+            $(this).hide();
+            $('#game').show();
+            game.play();
+        });
 
-    $('#submit').click(function() {
-      game.continue();
-    });
+        $('#submit').click(function() {
+            game.continue();
+        });
 
-  }
+    }
 
-  story() {
-    this.storyline = [
-      'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.' +
-      'CHOICESLeft:Right',
-      [
-        [
-          `
+    story() {
+        this.storyline = [
+            'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.' +
+            'CHOICESLeft:Right',
+            [
+                [
+                    `
 You follow the path until it leads out of the forest, up a hill, and the ensuing sight leaves you breathless.
 It's a skyline. Tall, slender buildings rise in the distance, jagged and tapered to a point high above the clouds. They seem to  pierce the clouds, their height obscene, as if attempting to offend nature with their pure excess of elevation. They look as if someone broke a mirror and stood the shards upright.
 It’s beautiful. You walk down, dazed, into a street full of people. After hours in a forest, the sight of so many people throws you off for a second and you stand there in a trance until someone bumps into your shoulder, throwing you down. He apologizes quickly and, with an upwards gesture, he drops his briefcase in midair. You automatically hold your hand out to stop it, but to your shock it doesn’t fall. It just… stands there in midair, suspended by an unseen force. The man misinterprets your shock and replies good-naturedly “Hey, not all businessmen are corrupt and greedy.”
 CHOICESHmm Suspicion:No Suspicion
           `,
-          [
-            [
-              `
+                    [
+                        [
+                            `
 He smiles, but something’s off about it. You get up, and he leans forward. His eyes, once full of humor, now betray nothing. You can’t detect any emotion. He leans forward, over your shoulder, hissing into your ear.
 “----------------?”
 “What?”
@@ -81,36 +86,46 @@ Ponytail snickers.
 Blond draws his finger across his throat and hangs his head backward limply. 
 You don’t know how to respond to that.CHOICESFight against your restraints:Play along and wait
               `,
-              [
-                [
-                  // TODO
-                  `
+                            [
+                                [
+                                    // TODO
+                                    `
 Before you do, a monitor to your right beeps, as if announcing your intent. Then you thrash wildly around, but you don’t gain an inch of give. The cuffs tighten around your wrists. Blond smirks. “Ah, so you’ve triggered Gerald.”
 “What?”
 Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when your heart pressure rises substantially, making him a good indicator of when you’re lying, nervous or about to do something.”
 “So don’t,” Blond finishes.
                   `,
-                  [
-                    [],
-                    []
-                  ]
-                ],
-                [
-                  // TODO
-                  `
+                                    [
+                                        [],
+                                        []
+                                    ]
+                                ],
+                                [
+                                    // TODO
+                                    `
 “So let me guess, I don’t leave this place alive?” you say with a nervous chuckle.
 Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. If they were a bit less psycho, they could make a half-decent comedy duo, you think.  
-Blond’s expression hardens.  He raises a pistol to your face, seemingly out of nowhere.
+Suddenly Blond’s expression hardens.  He raises a pistol to your forehead, seemingly out of nowhere.  You stare down the barrel.  
 Your heart stops.
+“Now, where were you yesterday?”
+You stammer, but nothing comes out.
+Blond presses the gun further into your forehead.
+“Where. Were. You?”
+You can barely force out an answer.
+“I-I don’t know!  Th-th-the earliest thing I c-can remember is waking up in the woods with no memory!”
+They both raise an eyebrow simultaneously.
+“No memory? None at all?”
+“No…”
+Ponytail narrows his eyes, and Blond gives you a perplexed look.
                   `
-                ]
-              ]
-            ],
-            []
-          ]
-        ],
-        [
-          `
+                                ]
+                            ]
+                        ],
+                        []
+                    ]
+                ],
+                [
+                    `
 You come across a man on his knees in the center of a clearing.  He’s facing away from you, his long black hair falling down to his shoulders.  His jeans are frayed at the cuffs and full of grass stains, his hands at his waist, his fingers curled slightly. You step on a branch.  The sound startles to the man.  He spins around and stands up, suddenly brandishing a knife at you.  Its crooked, silver blade points directly at your heart.  His hair falls out of his face.
 High, arching eyebrows.
 Thin lips the color of dried blood.
@@ -118,51 +133,54 @@ Eyes, black eyes that convey no soul, fathomless as black pits cut into the fles
 He starts to close the distance between you at a frightening speed.
 And a moment later, the hilt in buried in your chest.
            `
-        ]
-      ]
-    ];
-  }
-
-  play() {
-    $('select').empty();
-
-    var current_storyline = this.storyline;
-    for (var i = 0; i < this.iteration.length; i++) {
-      current_storyline = current_storyline[this.iteration[i]];
+                ]
+            ]
+        ];
     }
 
-    try {
-      var split = current_storyline[0].split('CHOICES');
-      var text = split[0];
+    play() {
+        $('select').empty();
 
-      var options = split[1].split(':');
-    } catch (e) {
-      var text = current_storyline[0] + '\n<b>THE END</b>';
-      Game.display(text, false);
-      return;
+        var current_storyline = this.storyline;
+        for (var i = 0; i < this.iteration.length; i++) {
+            current_storyline = current_storyline[this.iteration[
+                i]];
+        }
+
+        try {
+            var split = current_storyline[0].split('CHOICES');
+            var text = split[0];
+
+            var options = split[1].split(':');
+        }
+        catch (e) {
+            var text = current_storyline[0] + '\n<b>THE END</b>';
+            Game.display(text, false);
+            return;
+        }
+
+        var choice;
+        Game.display(text);
+        $.each(options, function(index, value) {
+            choice = document.createElement('option');
+            $(choice).text(value);
+            $(choice).val(index);
+            $('select').append(choice);
+        });
+
+        this.iteration.push(1);
     }
 
-    var choice;
-    Game.display(text);
-    $.each(options, function(index, value) {
-      choice = document.createElement('option');
-      $(choice).text(value);
-      $(choice).val(index);
-      $('select').append(choice);
-    });
+    continue () {
+        this.iteration.push($('select').val());
+        this.play();
+    }
 
-    this.iteration.push(1);
-  }
-
-  continue() {
-    this.iteration.push($('select').val());
-    this.play();
-  }
-  
 }
 
-window.onerror = function(message, othervar, othervar2, othervar3, error) {
-  alert(error.stack);
+window.onerror = function(message, othervar, othervar2, othervar3,
+    error) {
+    alert(error.stack);
 }
 
 var game = new Game();
