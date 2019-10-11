@@ -7,6 +7,9 @@ class Game {
 
         $('#output').html('');
 
+        if(text_array[0] == '') {
+            text_array.splice(0, 1);
+        }
         setTimeout(() => {
             Game.displayTimeout(text_array, i,
             showAnswer);
@@ -56,8 +59,7 @@ class Game {
 
     story() {
         this.storyline = [
-            'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.' +
-            'CHOICESLeft:Right',
+            'You are in a clearing.\nYou are in a clearing, and you\'re alone.\nYou are in a clearing, and the path leads left or right.CHOICESLeft:Right,
             [
                 [
                     `
