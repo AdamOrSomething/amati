@@ -10,6 +10,10 @@ class Game {
         if(text_array[0] == '') {
             text_array.splice(0, 1);
         }
+        if(text_array[text_array.length-1] == '') {
+            text_array.splice(text_array.length-1, text_array.length);
+        }
+        
         setTimeout(() => {
             Game.displayTimeout(text_array, i,
             showAnswer);
