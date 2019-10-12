@@ -161,7 +161,7 @@ And a moment later, the hilt in buried in your chest.
             var options = split[1].split(':');
         }
         catch (e) {
-            var text = current_storyline[0] + '\n<b>THE END</b>';
+            var text = current_storyline[0].trim() + '\n<b>THE END</b>';
             Game.display(text, false);
             return;
         }
