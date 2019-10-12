@@ -21,10 +21,11 @@ class Game {
     }
 
     static displayTimeout(text_array, i, showAnswer) {
-        $('#output').append(text_array[i].trim() + '<br><br>');
+        $('#output').append(text_array[i].trim());
         i++;
 
         if (!(i >= text_array.length)) {
+            $('#output').append('<br><br>');
             setTimeout(() => {
                 Game.displayTimeout(text_array, i,
                     showAnswer);
@@ -35,8 +36,7 @@ class Game {
         else if (showAnswer) {
             setTimeout(() => {
                 $('#input').show();
-            }, (text_array[i - 1].length - (text_array[i -
-                1].split(' ').length - 1) * 50));
+            }, (text_array[i - 1].length - (text_array[i - 1].split(' ').length - 1) * 50));
         }
     }
 
