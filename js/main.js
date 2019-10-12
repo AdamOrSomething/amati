@@ -33,6 +33,7 @@ class Game {
             return;
         }
         else if (showAnswer) {
+            console.log((text_array[(i - 1)].length - (text_array[(i - 1)].split(' ').length - 1) * 50));
             setTimeout(() => {
                 $('#input').show();
             }, (text_array[(i - 1)].length - (text_array[(i - 1)].split(' ').length - 1) * 50));
