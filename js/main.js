@@ -75,7 +75,7 @@ CHOICESHmm Suspicion:No Suspicion
                         [
                             `
 He smiles, but something’s off about it. You get up, and he leans forward. His eyes, once full of humor, now betray nothing. You can’t detect any emotion. He leans forward, over your shoulder, hissing into your ear.
-“----------------?”
+“Microwave a microwave?”
 “What?”
 You feel pressure behind your ear, and you collapse.
 
@@ -111,7 +111,7 @@ Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when you
                                     // TODO
                                     `
 “So let me guess, I don’t leave this place alive?” you say with a nervous chuckle.
-Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. <i>If they were a bit less psycho, they could make a half-decent comedy duo</i>, you think.  
+Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. If they were a bit less psycho, they could make a half-decent comedy duo, you think.  
 Suddenly Blond’s expression hardens.  He raises a pistol to your forehead, seemingly out of nowhere.  You stare down the barrel.  
 Your heart stops.
 “Now, where were you yesterday?”
@@ -120,10 +120,24 @@ Blond presses the gun further into your forehead.
 “Where. Were. You?”
 You can barely force out an answer.
 “I-I don’t know!  Th-th-the earliest thing I c-can remember is waking up in the woods with no memory!”
-They both raise an eyebrow simultaneously.
+They both raise an eyebrow simultaneously.  The gun falls to Blond’s side.
 “No memory? None at all?”
 “No…”
 Ponytail narrows his eyes, and Blond gives you a perplexed look.
+“Where in the woods?”
+You suddenly fear anger rise up in your chest.  Why should you follow along with these crees?
+“Near a tree.”
+Blond sighs.  
+“Don’t make this hard on yourself.”
+You can see his grip tightening on the gun, but you don’t care.
+“I’ll make this how I like!”
+Blond pinches the bridge of his nose as if he’s trying to stop a headache.
+“Forget him. Let’s move on to the girl.”
+Your anger is suddenly replaced by curiosity.
+“Wait, what?”
+Blond raises the pistol to your forehead.
+“EAT FRIJOLES, *******!”
+He pulls the trigger.
                   `
                                 ]
                             ]
