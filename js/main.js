@@ -2,40 +2,37 @@ class Game {
     static display(text, showAnswer = true) {
         $('#input').hide();
 
-        var text_array = text.split('\n');
-        var i = 0;
+        this.text_array = text.split('\n');
+        this.i = 0;
 
         $('#output').html('');
 
-        if(text_array[0] == '') {
-            text_array.splice(0, 1);
+        if(this.text_array[0] == '') {
+            this.text_array.splice(0, 1);
         }
-        if(text_array[text_array.length-1] == '') {
-            text_array.splice(text_array.length-1, text_array.length);
+        if(this.text_array[this.text_array.length-1] == '') {
+            this.text_array.splice(this.text_array.length-1, this.text_array.length);
         }
         
         setTimeout(() => {
-            Game.displayTimeout(text_array, i,
-            showAnswer);
+            Game.displayLine();
         }, 500);
     }
 
-    static displayTimeout(text_array, i, showAnswer) {
-        $('#output').append(text_array[i].trim());
-        i++;
+    static displayLine(text_array, i, showAnswer) {
+        $('#output').append(this.text_array[this.i].trim());
+        this.i++;
 
-        if (!(i >= text_array.length)) {
-            $('#output').append('<br><br>');
+        if (!(this.i >= this.text_array.length)) {
             setTimeout(() => {
-                Game.displayTimeout(text_array, i,
-                    showAnswer);
-            }, ((text_array[i - 1].length - (text_array[i - 1].split(' ').length - 1)) * 30));
+                $('#continue').show();
+            }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
             return;
         }
         else if (showAnswer) {
             setTimeout(() => {
                 $('#input').show();
-            }, ((text_array[i - 1].length - (text_array[i - 1].split(' ').length - 1)) * 50));
+            }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
         }
     }
 
@@ -58,6 +55,9 @@ class Game {
             game.continue();
         });
 
+        $('#continue').click(function() {
+            Game.displayLine();
+        });
     }
 
     story() {
