@@ -59,6 +59,7 @@ class Game {
         $('#continue').click(function() {
             Game.displayLine();
         });
+        $('#continue').hide();
     }
 
     story() {
