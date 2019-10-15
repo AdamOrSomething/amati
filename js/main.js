@@ -4,6 +4,7 @@ class Game {
 
         this.text_array = text.split('\n');
         this.i = 0;
+        this.showAnswer = showAnswer;
 
         $('#output').html('');
 
@@ -19,7 +20,7 @@ class Game {
         }, 500);
     }
 
-    static displayLine(text_array, i, showAnswer) {
+    static displayLine() {
         $('#output').append(this.text_array[this.i].trim());
         this.i++;
 
@@ -29,7 +30,7 @@ class Game {
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
             return;
         }
-        else if (showAnswer) {
+        else if (this.showAnswer) {
             setTimeout(() => {
                 $('#input').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
