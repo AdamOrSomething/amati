@@ -145,6 +145,19 @@ He pulls the trigger.
                         ],
                         [
                             // TODO
+                            `
+You grab his hand and pull up.
+
+Suddenly, you’re transported into someone else.  You’re in the driver’s seat of a car.  Your name is Mike, and the girl in the backseat is Sam.  She’s hitchhiking.
+You drive on a dirt path in the forest.  Sam suddenly tells you to pull over.  She gets out of the car, saying she needs some fresh air.
+
+She’s been gone for five minutes.  You get out of the car but you don’t see her.  And then something hits your head.
+
+Pain explodes in the back of your head.  Your ears ring, you see stars.  You look around to see the source of the impact but Sam’s the only person there.  All humor is gone from her eyes, replaced by a steely and detached lack of empathy.  Then she speaks.
+“My sister died in a car crash a year ago.  It was an easily avoidable hit, but the driver was irresponsible and his skills were nonexistent.  Since then, I have gone hitchhiking, verifying if these drivers could have made the move which could have saved my sister.  Your driving skills are pitiful.  I’m sorry, but you have to disappear.”
+
+You can’t lift your head, but you try anyway to stop her.  But you know this is coming.  
+                            `
                         ]
                     ]
                 ],
@@ -202,8 +215,7 @@ And a moment later, the hilt in buried in your chest.
 
 }
 
-window.onerror = function(message, othervar, othervar2, othervar3,
-    error) {
+window.onerror = function(message, othervar, othervar2, othervar3, error) {
     alert(error.stack);
 }
 
