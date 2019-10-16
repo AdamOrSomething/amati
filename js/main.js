@@ -28,9 +28,13 @@ class Game {
         this.i++;
 
         if (this.i < this.text_array.length) {
-            setTimeout(() => {
-                $('#continue').show();
-            }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
+            if(this.text_array[this.i].trim() == '') {
+                Game.displayLine();
+            } else {
+                setTimeout(() => {
+                    $('#continue').show();
+                }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
+            }
             return;
         }
         if (this.showAnswer) {
