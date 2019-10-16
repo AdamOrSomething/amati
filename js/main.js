@@ -57,9 +57,9 @@ class Game {
             game.continue();
         });
 
-        $('#continue').click(function() {
+        $('#continue').click(function(e) {
             $(this).hide();
-            $(this).preventDefault();
+            e.preventDefault();
             Game.displayLine();
         });
         $('#continue').hide();
