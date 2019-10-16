@@ -1,11 +1,10 @@
 class Game {
-    static display(text, showAnswer = true, theEnd = false) {
+    static display(text, showAnswer = true) {
         $('#input').hide();
 
         this.text_array = text.split('\n');
         this.i = 0;
         this.showAnswer = showAnswer;
-        this.theEnd = theEnd;
 
         $('#output').html('');
 
@@ -40,9 +39,9 @@ class Game {
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
             return;
         }
-        else if (this.theEnd) {
+        else {
             setTimeout(() => {
-                $('#output').append('<br><br><b>THE END</b>');
+                $('#output').append('<b>THE END</b>');
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
             return;
         }
