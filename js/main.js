@@ -126,7 +126,7 @@ Ah, well.
                                     // TODO
                                     `
 “So let me guess, I don’t leave this place alive?” you say with a nervous chuckle.
-Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. If they were a bit less psycho, they could make a half-decent comedy duo, you think.  
+Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. <i>If they were a bit less psycho, they could make a half-decent comedy duo</i>, you think.  
 Suddenly Blond’s expression hardens.  He raises a pistol to your forehead, seemingly out of nowhere.  You stare down the barrel.  
 Your heart stops.
 “Now, where were you yesterday?”
@@ -140,7 +140,7 @@ They both raise an eyebrow simultaneously.  The gun falls to Blond’s side.
 “No…”
 Ponytail narrows his eyes, and Blond gives you a perplexed look.
 “Where in the woods?”
-You suddenly fear anger rise up in your chest.  Why should you follow along with these crees?
+You suddenly fear anger rise up in your chest.  Why should you follow along with these creeps?
 “Near a tree.”
 Blond sighs.  
 “Don’t make this hard on yourself.”
