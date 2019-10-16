@@ -112,8 +112,11 @@ You don’t know how to respond to that.CHOICESFight against your restraints:Pla
                                     `
 Before you do, a monitor to your right beeps, as if announcing your intent. Then you thrash wildly around, but you don’t gain an inch of give. The cuffs tighten around your wrists. Blond smirks. “Ah, so you’ve triggered Gerald.”
 “What?”
-Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when your heart pressure rises substantially, making him a good indicator of when you’re lying, nervous or about to do something.”
-“So don’t,” Blond finishes.
+Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when your heart pressure rises substantially, making him a good indicator of when you’re lying, nervous, or up to no good.”
+“So don’t be,” Blond finishes.
+“Oh, and if it happens again you die.”
+Your heart rate rises, as it does when you are told you’re about to die.
+Ah, well.  
                   `,
                                     [
                                         [],
