@@ -1,10 +1,11 @@
 class Game {
-    static display(text, showAnswer = true) {
+    static display(text, showAnswer = true, theEnd = false) {
         $('#input').hide();
 
         this.text_array = text.split('\n');
         this.i = 0;
         this.showAnswer = showAnswer;
+        this.theEnd = theEnd;
 
         $('#output').html('');
 
@@ -36,6 +37,10 @@ class Game {
         else if (this.showAnswer) {
             setTimeout(() => {
                 $('#input').show();
+            }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
+        } else if (this.theEnd) {
+            setTimeout(() => {
+                $('#output').append('<br><br><b>THE END</b>');
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
         }
     }
@@ -197,8 +202,7 @@ And a moment later, the hilt in buried in your chest.
             var options = split[1].split(':');
         }
         catch (e) {
-            var text = current_storyline[0].trim() + '\n<b>THE END</b>';
-            Game.display(text, false);
+            Game.display(text, false, true);
             return;
         }
 
