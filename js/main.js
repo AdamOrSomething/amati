@@ -8,21 +8,21 @@ class Game {
 
         $('#output').html('');
 
-        if(this.text_array[0] == '') {
+        if (this.text_array[0] == '') {
             this.text_array.splice(0, 1);
         }
-        if(this.text_array[this.text_array.length-1] == '') {
-            this.text_array.splice(this.text_array.length-1, this.text_array.length);
+        if (this.text_array[this.text_array.length - 1] == '') {
+            this.text_array.splice(this.text_array.length - 1, this.text_array.length);
         }
-        
+
         setTimeout(() => {
             Game.displayLine();
         }, 500);
     }
 
     static displayLine() {
-        if(this.i !== 0) {
-           $('#output').append('<br><br>');
+        if (this.i !== 0) {
+            $('#output').append('<br><br>');
         }
         $('#output').append(this.text_array[this.i].trim());
         this.i++;
@@ -39,12 +39,11 @@ class Game {
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
             return;
         }
-       
+
         setTimeout(() => {
             $('#output').append('<b>THE END</b>');
         }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
-    
-        }
+
     }
 
     constructor() {
