@@ -22,9 +22,11 @@ class Game {
 
     static displayLine() {
         $('#output').append(this.text_array[this.i].trim());
+        $('#continue').xhide();
         this.i++;
 
         if (!(this.i >= this.text_array.length)) {
+            $('#output').append('<br><br>');
             setTimeout(() => {
                 $('#continue').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
