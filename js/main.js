@@ -38,10 +38,13 @@ class Game {
             setTimeout(() => {
                 $('#input').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
-        } else if (this.theEnd) {
+            return;
+        }
+        else if (this.theEnd) {
             setTimeout(() => {
                 $('#output').append('<br><br><b>THE END</b>');
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
+            return;
         }
     }
 
