@@ -41,7 +41,7 @@ class Game {
         }
 
         setTimeout(() => {
-            $('#output').append('<b>THE END</b>');
+            $('#output').append('<br><br><b>THE END</b>');
         }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
 
     }
