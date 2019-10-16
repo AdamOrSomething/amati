@@ -8,10 +8,10 @@ class Game {
 
         $('#output').html('');
 
-        if (this.text_array[0] == '') {
+        if (this.text_array[0].trim() == '') {
             this.text_array.splice(0, 1);
         }
-        if (this.text_array[this.text_array.length - 1] == '') {
+        if (this.text_array[this.text_array.length - 1].trim() == '') {
             this.text_array.splice(this.text_array.length - 1, this.text_array.length);
         }
 
