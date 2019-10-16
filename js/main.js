@@ -22,7 +22,6 @@ class Game {
 
     static displayLine() {
         $('#output').append(this.text_array[this.i].trim());
-        $('#continue').xhide();
         this.i++;
 
         if (!(this.i >= this.text_array.length)) {
@@ -59,6 +58,8 @@ class Game {
         });
 
         $('#continue').click(function() {
+            $(this).hide();
+            $(this).preventDefault();
             Game.displayLine();
         });
         $('#continue').hide();
