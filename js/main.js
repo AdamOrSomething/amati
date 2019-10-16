@@ -21,7 +21,7 @@ class Game {
     }
 
     static displayLine() {
-        if(!(i == 0) {
+        if(!(i == 0)) {
            $('#output').append('<br><br>');
         }
         $('#output').append(this.text_array[this.i].trim());
