@@ -21,29 +21,29 @@ class Game {
     }
 
     static displayLine() {
-        if(!(this.i == 0)) {
+        if(this.i !== 0) {
            $('#output').append('<br><br>');
         }
         $('#output').append(this.text_array[this.i].trim());
         this.i++;
 
-        if (!(this.i >= this.text_array.length)) {
+        if (this.i < this.text_array.length) {
             setTimeout(() => {
                 $('#continue').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
             return;
         }
-        else if (this.showAnswer) {
+        if (this.showAnswer) {
             setTimeout(() => {
                 $('#input').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
             return;
         }
-        else {
-            setTimeout(() => {
-                $('#output').append('<b>THE END</b>');
-            }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
-            return;
+       
+        setTimeout(() => {
+            $('#output').append('<b>THE END</b>');
+        }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 15));
+    
         }
     }
 
