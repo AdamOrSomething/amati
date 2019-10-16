@@ -21,11 +21,13 @@ class Game {
     }
 
     static displayLine() {
+        if(!(i == 0) {
+           $('#output').append('<br><br>');
+        }
         $('#output').append(this.text_array[this.i].trim());
         this.i++;
 
         if (!(this.i >= this.text_array.length)) {
-            $('#output').append('<br><br>');
             setTimeout(() => {
                 $('#continue').show();
             }, ((this.text_array[this.i - 1].length - (this.text_array[this.i - 1].split(' ').length - 1)) * 10));
