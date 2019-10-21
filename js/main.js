@@ -96,9 +96,9 @@ You feel pressure behind your ear, and you collapse.<br>
 “Caaarl…”
 “I saw this man with my own eyes that night. I’m absolutely sure it’s him.”
 “And how did he respond to the query?”
-You peek through the tiniest crack you can possibly create with your eyelids. You’re on a metal slab, restrained by metal cuffs welded deep into the slab. Monitors displaying things you don’t understand surround you. The slab is slightly elevated, about a foot off the floor, and angled so you’re in a semi-upright position, feet pointed at the two men in front of you. They’re facing each other in deep conversation. They’re wearing ---, with ---. One of them is tall and thin, with short blond hair. The other is slightly shorter, with long and black hair tied back in a ponytail. Suddenly one of the monitors starts beeping rapidly. They spin around, look at you. Blond walks over and examines your restraints, and Ponytail sneers at you menacingly.
-“Look who’s awake,” says Blond. 
-“Where am I?!” you say, hysteria starting to rise in your chest. “How’d I get here? Who are you people?”
+You peek through the tiniest crack you can possibly create with your eyelids. You’re on a metal slab, restrained by rigid metal cuffs suspended in the air like the briefcase was, the same fluorescent blue discs, the same air shimmer. White, glowing words and charts surround you, floating in midair. You can’t understand any of them. The slab is slightly elevated, about a foot off the floor, and angled so you’re in a semi-upright position, feet pointed at the two men in front of you. They’re facing each other in deep conversation. They’re wearing casual clothes, jeans and T-shirts. One of them is tall and thin, with short blond hair. The other is slightly shorter, with long and black hair tied back in a ponytail. Suddenly one of the monitors starts beeping rapidly. They spin around, look at you. Blond walks over and examines your restraints, and Ponytail sneers at you menacingly. 
+“Look who’s awake,'' says Blond. 
+“Where am I?!” You say, hysteria starting to rise in your chest. “How’d I get here? Who are you people?”
 Blond grins. “Welcome,” he says, “To Area 77!”
 Ponytail snickers.
 “What my friend’s trying to say is, this place has a name that’s heavily classified. The mere knowledge of it is a capital offense, and being in it without clearance…”
@@ -109,13 +109,13 @@ You don’t know how to respond to that.CHOICESFight against your restraints:Pla
                                 [
                                     // TODO
                                     `
-Before you do, a monitor to your right beeps, as if announcing your intent. Then you thrash wildly around, but you don’t gain an inch of give. The cuffs tighten around your wrists. Blond smirks. “Ah, so you’ve triggered Gerald.”
+Before you do, a monitor to your right beeps, as if announcing your intent. Then you thrash wildly around, but you don’t gain an inch of give. The cuffs shrink to tighten around your wrists.Blond smirks. “Ah, so you’ve triggered Gerald.”
 “What?”
-Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when your heart pressure rises substantially, making him a good indicator of when you’re lying, nervous, or up to no good.”
+Ponytail pokes the monitor that beeped. “This is Gerald. He will beep when your heart pressure rises substantially, as well as certain chemical imbalances in the bloodstream and brain, making him a good indicator of when you’re lying, nervous, or up to no good.”
 “So don’t be,” Blond finishes.
 “Oh, and if it happens again you die.”
 Your heart rate rises, as it does when you are told you’re about to die.
-Ah, well.  
+Ah, well.
                   `,
                                     [
                                         [],
@@ -126,9 +126,11 @@ Ah, well.
                                     // TODO
                                     `
 “So let me guess, I don’t leave this place alive?” you say with a nervous chuckle.
-Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. <i>If they were a bit less psycho, they could make a half-decent comedy duo</i>, you think.  
-Suddenly Blond’s expression hardens.  He raises a pistol to your forehead, seemingly out of nowhere.  You stare down the barrel.  
-Your heart stops.
+Ponytail claps sarcastically, and Blond smiles mockingly. “Ah!  He gets it!  You’re a smart one, ain’tcha?” he says. <i>If they were a bit less psycho, they could make a half-decent comedy duo, you think.</i>
+Suddenly Blond’s expression hardens.  He raises a gun to your forehead, seemingly out of nowhere.  You’re terrified and fascinated by the weapon.  It’s black, with red lines running down the barrel.  You’re not sure what it’s made of, but the material looks glossy, and seems to give off a faint glow… but there was no such thing as a black glow.  
+Was there?<br>
+You’re forcefully pulled back to reality as Blond snaps imperiously.
+You stare down the barrel.   
 “Now, where were you yesterday?”
 You stammer, but nothing comes out.
 Blond presses the gun further into your forehead.
@@ -150,8 +152,8 @@ Blond pinches the bridge of his nose as if he’s trying to stop a headache.
 “Forget him. Let’s move on to the girl.”
 Your anger is suddenly replaced by curiosity.
 “Wait, what?”
-Blond raises the pistol to your forehead.
-“EAT FRIJOLES, *******!”
+Blond raises the gun to your forehead.
+<b>“EAT FRIJOLES, *******!”</b>
 He pulls the trigger.
                   `
                                 ]
